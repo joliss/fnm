@@ -80,10 +80,10 @@ let printUseOnCd = (~shell) =>
     __fnmcd () {
       cd "$@"
 
-      if [[ -f .node-version && .node-version ]]; then
+      if [[ -f .node-version ]]; then
         echo "fnm: Found .node-version"
         fnm use
-      elif [[ -f .nvmrc && .nvmrc ]]; then
+      elif [[ -f .nvmrc ]]; then
         echo "fnm: Found .nvmrc"
         fnm use
       fi
